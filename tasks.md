@@ -7,7 +7,7 @@
   - [x] ページ遷移の検討 :thinking:
   - [x] HTTPメソッドとリソース名の決定
   - [x] ページ遷移図の作成 :writing_hand:
-  - [ ] ページ構造の決定
+  - [x] ページ構造の決定
   - [ ] ドキュメントの構成の検討 :thinking:
   - [ ] 概要 :writing_hand:
   - [x] HTTPメソッドとリソース名一覧 :writing_hand:
