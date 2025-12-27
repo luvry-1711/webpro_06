@@ -13,7 +13,7 @@
         <tr><td><%= row.id %></td>
         <td><%= row.place %></td>
         <td><a href="/dome/<%= number %>"><%= row.name %></a></td>
-        <td><a href="/dome/delete/<%= number %>">削除</a></td></tr>
+        <td><a href="/dome/delete/<%= number %>" onclick="return confirm('本当にこのチームを削除しますか？');">削除</a></td></tr>
         <% number += 1 %>
       <% } %>
   </table>
