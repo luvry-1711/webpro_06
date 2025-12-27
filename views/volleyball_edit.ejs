@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.school %></title>
+</head>
+<body>
+  <h2><%= data.school %>の編集</h2>
+  <form action="/volleyball/update/<%= data.id - 1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      <tr><td>高校名</td><td><input type="text" name="school" value="<%= data.school %>"></td></tr>
+      <tr><td>名前</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>CV</td><td><input type="text" name="CV" value="<%= data.CV %>"></td></tr>
+      <tr><td>背番号，役職ect.</td><td><input type="text" name="num" value="<%= data.num %>"></td></tr>
+      <tr><td>ポジション</td><td><input type="text" name="position" value="<%= data.position %>"></td></tr>
+      <tr><td>身長</td><td><input type="text" name="tall" value="<%= data.tall %>"></td></tr>
+      <tr><td>体重</td><td><input type="text" name="weight" value="<%= data.weight %>"></td></tr>
+      <tr><td>ジャンプ最高到達点</td><td><input type="text" name="jamp" value="<%= data.jamp %>"></td></tr>
+      <tr><td>誕生日</td><td><input type="text" name="birth" value="<%= data.birth %>"></td></tr>
+      <tr><td>好物</td><td><input type="text" name="like" value="<%= data.like %>"></td></tr>
+    </table>
+    <input type="submit" values="登録">
+  </form>
+  <a href="/volleyball/<%= id %>"><%= data.school %>メンバー一覧に戻る</a>
+</body>
+</html>

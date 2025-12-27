@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %>アリーナ率</title>
+</head>
+<body>
+  <h2><%= data.name %>のゲート一覧</h2>
+  <table>
+    <tr><th>ゲート番号</th><th>アリーナ率</th></tr>
+    <% for( let gate of data.gate ) { %>
+        <tr>
+          <td><%= gate.num %></td>
+          <td><%= gate.type %></td>
+        </tr>
+      <% } %>
+  </table>
+  <a href="/dome/edit/<%= id %>">編集</a>
+  <a href="/dome">ドーム一覧に戻る</a>
+  <a href="/dome/<%= id %>"><%= data.name %>詳細に戻る</a>
+</body>
+</html>

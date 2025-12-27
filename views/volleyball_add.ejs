@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>キャラクターを追加する</title>
+</head>
+<body>
+    <h2>キャラクターを追加</h2>
+    
+    <form action="/volleyball/member/add/<%= id %>" method="POST">
+
+        <label>名前：</label><br>
+        <input type="text" name="name" required><br>
+
+        <label>背番号：</label><br>
+        <input type="text" name="num" required><br>
+
+        <label>ポジション：</label><br>
+        <input type="text" name="position"><br>
+
+        <label>学年：</label><br>
+        <input type="text" name="age"><br>
+        
+        <label>CV：</label><br>
+        <input type="text" name="CV"><br>
+
+        <label>身長：</label><br>
+        <input type="text" name="tall"><br>
+
+        <label>体重：</label><br>
+        <input type="text" name="weight"><br>
+
+        <label>ジャンプ最高到達点：</label><br>
+        <input type="text" name="jamp"><br>
+
+        <label>誕生日：</label><br>
+        <input type="text" name="birth"><br>
+
+        <label>好物：</label><br>
+        <input type="text" name="like"><br>
+
+        <br>
+        <input type="submit" value="登録">
+    </form>
+    
+    <br>
+    <a href="/volleyball/<%= id %>">メンバー一覧に戻る</a>
+</body>
+</html>

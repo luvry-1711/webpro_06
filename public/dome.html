@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ドームを追加する</title>
+</head>
+<body>
+    <form action="/dome" method="POST">
+
+        <label for="place">場所</label><br>
+        <input type="text" name="place" id="place" required><br>
+
+        <label for="name">ドーム名</label><br>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="station">最寄り駅</label><br>
+        <input type="text" name="station" id="station"><br>
+
+        <label for="capa">キャパ</label><br>
+        <input type="text" name="capa" id="capa"><br><br>
+
+        <input type="submit" values="登録">
+    </form>
+    <br>
+    <a href="/dome">一覧に戻る</a>
+</body>
+</html>

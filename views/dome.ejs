@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ドームゲート</title>
+</head>
+<body>
+  <h2>ドーム一覧</h2>
+  <table>
+    <tr><th>ID</th><th>場所</th><th>ドーム</th></tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+        <tr><td><%= row.id %></td>
+        <td><%= row.place %></td>
+        <td><a href="/dome/<%= number %>"><%= row.name %></a></td>
+        <td><a href="/dome/delete/<%= number %>">削除</a></td></tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+  <br>
+  <a href="/dome/create">新しいドームを追加する</a>
+</body>
+</html>

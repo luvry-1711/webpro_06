@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Snow Man表</title>
+</head>
+<body>
+  <h2>Snow Manメンバー一覧</h2>
+  <table>
+    <tr><th>ID</th><th>メンバーカラー</th><th>名前</th></tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+        <tr><td><%= row.id %></td>
+        <td><%= row.color %></td>
+        <td><a href="/sn/<%= number %>"><%= row.name %></a></td>
+        <td><a href="/sn/delete/<%= number %>">削除</a></td></tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+  <br>
+  <a href="/sn/create">メンバーを追加する</a>
+</body>
+</html>

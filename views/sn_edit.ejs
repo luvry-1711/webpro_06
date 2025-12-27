@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の編集</h2>
+  <form action="/sn/update/<%= data.id - 1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      <tr><td>名前</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>メンバーカラー</td><td><input type="text" name="color" value="<%= data.color %>"></td></tr>
+      <tr><td>生年月日</td><td><input type="text" name="birth" value="<%= data.birth %>"></td></tr>
+      <tr><td>出身地</td><td><input type="text" name="from" value="<%= data.from %>"></td></tr>
+      <tr><td>血液型</td><td><input type="text" name="DNA" value="<%= data.DNA %>"></td></tr>
+      <tr><td>身長</td><td><input type="text" name="tall" value="<%= data.tall %>"></td></tr>
+      <tr><td>入所日</td><td><input type="text" name="admission" value="<%= data.admission %>"></td></tr>
+      <tr><td>趣味</td><td><input type="text" name="hobby" value="<%= data.hobby %>"></td></tr>
+      <tr><td>特技</td><td><input type="text" name="skill" value="<%= data.skill %>"></td></tr>
+    </table>
+    <input type="submit" values="登録">
+  </form>
+  <a href="/sn/">メンバー一覧に戻る</a>
+</body>
+</html>

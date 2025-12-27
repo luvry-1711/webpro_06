@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.school %></title>
+</head>
+<body>
+  <h2><%= data.school %>メンバー一覧</h2>
+  <table>
+    <tr><th>背番号，役職ect.</th><th>名前</th></tr>
+    <% let i = 0; %>
+    <% for( let chara of data.chara ) { %>
+      <tr>
+          <td><%= chara.num %></td>
+          <td><a href="/volleyball/profile/<%= id %>/<%= chara.num %>"><%= chara.name %></a></td>
+          <td><a href="/volleyball/member/delete/<%= id %>/<%= i %>">削除</a></td>
+      </tr>
+    <% i++; %>
+    <% } %>
+  </table>
+  <br>
+  <a href="/volleyball/create/<%= id %>">キャラクターを追加する</a>
+  <a href="/volleyball">高校一覧に戻る</a>
+</body>
+</html>
